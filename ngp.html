@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link rel="stylesheet" href="home.css"!-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+ }
+ body{
+    background-color: rgb(255, 255, 255);
+ }
+ .logo{
+     display: flex;
+     align-items: center;
+  }
+  .logo img{
+     width: 160px;
+     padding-top: 100px;
+     padding: 0 100px;
+     height: 160px;
+     padding-right: 25px;
+     padding-left: 20px;
+  }
+  nav{
+     display: flex;
+     
+  }
+  nav ul{
+     height: 90px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;  
+  }
+  nav ul li{
+     list-style: none;
+     padding: 0 30px;
+  }
+  nav ul li a{
+     color: rgb(0, 0, 0);
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 25px;
+     padding-top: 20px;
+  }
+  nav ul li a:hover{
+     font-weight: bold;
+  }
+  
+  footer {
+  background-color: black;
+  color: white;
+  bottom: 0;
+  width: 100vw;
+  font-size: 16px;
+}
+footer * {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+footer .row {
+  padding: 1em 1em;
+}
+footer .row.primary {
+  display: grid;
+  grid-template-columns: 3fr 2fr 4fr;
+  align-items: stretch;
+}
+footer .column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+footer h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+footer li:not(:first-child) {
+  margin-top: 0.8em;
+}
+footer ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: #c7940a;
+}
+footer .about p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+footer input,
+button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+footer button {
+  background-color: #c7940a;
+  color: #ffffff;
+}
+footer div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+footer.social i {
+  color: #bac6d9;
+}
+
+footer .copyright {
+  background-color: black;
+}
+footer .footer-menu{
+  float: left;
+    margin-top: 10px;
+}
+footer .footer-menu a{
+  color: white;
+  padding: 6px;
+  text-decoration: none;
+}
+footer .footer-menu a:hover, .social i:hover{
+  color: #c7940a;
+}
+footer .copyright p {
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .menu-button {
+    background-color: pink;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu {
+    background-color: pink;
+    color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    left: 0;
+  }
+  
+  .content {
+    margin-right: 250px;
+    padding: 20px;
+  }
+
+  
+
+
+
+
+  
+</style>
+
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a>
+                    <img src="./img/logo_1.png" alt="logo">
+                </a>
+            </div>
+            <div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#links">Contact</a></li>
+                
+    
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Explore
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">E-Commerce</a></li>
+          <li><a class="dropdown-item" href="#">Scholarship</a></li>
+          <li><a class="dropdown-item" href="#">Jobs</a></li>
+          <li><a class="dropdown-item" href="#">Periods Tracking</a></li>
+          <li><a class="dropdown-item" href="#">Events</a></li>
+          <li><a class="dropdown-item" href="#">Police Complaints</a></li>
+          <li><a class="dropdown-item" href="#">Medical Consultants</a></li>
+        </ul>
+      </li>
+    </ul>
+            </ul>
+            </div>
+        </nav>
+                
+                
+
+                
+            
+        
+    </header>
+    
+    <div class="card text-center">
+        <div class="card-header" style="background-color: pink; color: rgb(6, 6, 6); padding :  10px; font-size: 18px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            Glow And Lovely Careers
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="font-family: 'Comic Sans MS', cursive;">
+                Eligibility Criteria: Minimum 18 years of age
+                
+            </h5>
+        </body>
+          <p class="card-text">A WONK Tutor is a tuition teacher who is trained and certified so that parents are assured of getting quality teaching services for their children</p>
+          <a href="https://www.glowandlovelycareers.in/en/exciting-jobs/teaching-jobs" class="btn btn-primary">Follow link to apply</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+          5 days ago
+        </div>
+      </div><br>
+
+      <div class="card text-center">
+        <div class="card-header" style="background-color: pink; color: rgb(6, 6, 6); padding :  10px; font-size: 18px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            Women's CricZone 
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="font-family: 'Comic Sans MS', cursive;">Eligibility Criteria: Excellent communication skills, both oral and written - womens
+            </h5>
+        </body>
+          <p class="card-text">With ability to manage both shifts and Ability to meet deadlines, prioritize assignments and handle multiple tasks simultaneously.</p>
+          <a href="https://www.google.com/search?q=job+opportunities+for+womens&sca_esv=559695874&rlz=1C1CHBF_enIN1055IN1055&sxsrf=AB5stBhxgd82CASkxJwmqcM_IK_KxChFQw:1692874591731&ei=XzfnZOaiLKDXseMPuYi06AQ&uact=5&oq=job+opportunities+for+womens&gs_lp=Egxnd3Mtd2l6LXNlcnAiHGpvYiBvcHBvcnR1bml0aWVzIGZvciB3b21lbnMyBhAAGBYYHjIGEAAYFhgeMggQABiKBRiGAzIIEAAYigUYhgMyCBAAGIoFGIYDSMMxUKACWI0pcAF4AZABAJgBigagAekbqgENMC42LjEuMS4wLjIuMbgBA8gBAPgBAcICChAAGEcY1gQYsAPCAgoQABiKBRiwAxhDwgINEAAYigUYsQMYgwEYQ8ICBRAAGIAEwgIHEAAYigUYQ8ICDRAAGIoFGLEDGMkDGEPCAggQABiABBixA8ICCxAAGIAEGLEDGIMB4gMEGAAgQYgGAZAGCg&sclient=gws-wiz-serp&ibp=htl;jobs&sa=X&ved=2ahUKEwib8uipkfWAAxWzcmwGHRCHDsIQkd0GegQIQhAB#fpstate=tldetail&htivrt=jobs&htiq=job+opportunities+for+womens&htidocid=7-V2-Ri5a-wAAAAAAAAAAA%3D%3D" class="btn btn-primary">Follow link to apply</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+          7 days ago
+        </div>
+      </div><br>
+
+      <div class="card text-center">
+        <div class="card-header" style="background-color: pink; color: rgb(6, 6, 6); padding :  10px; font-size: 18px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            Recepitix - Typing Jobs For Womens
+          </div>
+        <div class="card-body">
+            <h5 class="card-title" style="font-family: 'Comic Sans MS', cursive;">Eligibility Criteria: All The Womens Graduate</h5>
+        </body>
+          <p class="card-text">Flexible solutions for every business. Get more done w/ productivity & collaboration tools..</p>
+          <a href="https://www.receptix.com/in/business-g-suite-project-management-system?suffix=false&_NR_&utm_campaign=20478797901&utm_source=google&utm_medium=cpc&utm_type=search&utm_campaign=20478797901&gad=1&gclid=Cj0KCQjw_5unBhCMARIsACZyzS3iDAxEK8Z49uIzPUp2p_UopJics_nN1xXsTLWI3HVbaqSdqCxaWGYaAqcHEALw_wcB" class="btn btn-primary" >Follow link to apply</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+          few hours ago
+        </div>
+      </div><br>
+
+      <div class="card text-center">
+        <div class="card-header" style="background-color: pink; color: rgb(6, 6, 6); padding :  10px; font-size: 18px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            Her Second Innings
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="font-family: 'Comic Sans MS', cursive;">Eligibility Criteria: Proficient in all Microsoft Office applications</h5>
+        </body>
+          <p class="card-text">The ability to manipulate large,complex data sets into manageable.</p>
+          <a href="https://www.google.com/search?q=job+opportunities+for+womens&ibp=htl;jobs&sa=X&ved=2ahUKEwiKwKnDkvWAAxVVTWwGHTiFAoYQkd0GegQIQxAB#fpstate=tldetail&htivrt=jobs&htiq=job+opportunities+for+womens&htidocid=TsQ5pHG8fkEAAAAAAAAAAA%3D%3D&sxsrf=AB5stBixpFa2wImR9cmV1SDVUqkh9K8F5A:1692874922686" class="btn btn-primary">Follow link to apply</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+          15 days ago
+        </div>
+      </div><br>
+
+    
+
+
+    
+    <footer style="background-color: pink;">
+        <div class="row primary">
+            <div class="column about">
+              <h3>Connect</h3>
+              <p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                3/100, West Vinayakarkovil Street, Subbegounden Pudur - Post, Pollachi Taluk - 642103, Coimbatore Dist. TamilNadu,India.
+                <br>cocokaa@gmail.com<br>9942134450
+            </p>
+              <div class="social">
+                <i class="fa fa-facebook-square"></i>
+                <i class="fa fa-twitter-square"></i>
+                <i class="fa fa-linkedin-square"></i>
+                <i class="fa fa-instagram"></i>
+              </div>
+            </div>
+          
+            <div class="column link">
+              <h3>Links</h3>
+              <div>
+              <ul>
+                <li><a class="dropdown-item" href="#">Home</a></li>
+    <li><a class="dropdown-item" href="#">About</a></li>
+    <li><a class="dropdown-item" href="#">Explore </a></li>
+    <li><a class="dropdown-item" href="#">Contact </a></li>
+              </ul>
+              </div>
+            </div>
+          
+            <div class="column subscribe">
+              <h3>Newsletter</h3>
+              <div>
+                <input type="email" placeholder="Your email id here" />
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row copyright">
+            <div class="footer-menu">
+                
+                 <a href="https://www.linkedin.com"><img src="link.png" alt="LinkedIn" style="width:30px;height: 30px;"></a>
+                <a href="https://twitter.com"><img src="twt.png" alt="twitter" style="width:30px;height: 30px;"></a>
+                <a href="https://web.telegram.com"><img src="tele.png" alt="Telegram" style="width:30px;height: 30px;"></a>
+                <a href="https://www.instagram.com"><img src="instag.png" alt="Instagram" style="width:30px;height: 30px; background-color: black;"></a>
+            
+            </div>
+            <center> <p style="font-size: 20px;padding-right: 200px;">&copy; 2023 Glowing E-commerce. All rights reserved.</p> </center>
+           <center> <a href="#enquiry" style="font-size: 30px;padding-left: 1100px; color: white;">Enquiry</a></center>
+          </div>
+
+    </footer>
+    
+
+
+
+</body>
+</html>
